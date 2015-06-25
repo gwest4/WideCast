@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">  
+	
+    <display-name>WideCast</display-name>
+	
+<!-- #################################################################################
+	 ################################## SERVLET DEFS #################################
+     ################################################################################# -->
+	
+	<servlet>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>Home</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/Home</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>SignIn</servlet-name>
+        <servlet-class>SignIn</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>SignIn</servlet-name>
+		<url-pattern>/SignIn</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>SignOut</servlet-name>
+        <servlet-class>SignOut</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>SignOut</servlet-name>
+		<url-pattern>/SignOut</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>Products</servlet-name>
+        <servlet-class>Products</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>Products</servlet-name>
+		<url-pattern>/Products</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>ShoppingCart</servlet-name>
+        <servlet-class>ShoppingCart</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>ShoppingCart</servlet-name>
+		<url-pattern>/ShoppingCart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>Payment</servlet-name>
+        <servlet-class>MakePayment</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>Payment</servlet-name>
+		<url-pattern>/Payment</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>PaymentConfirmation</servlet-name>
+        <servlet-class>PaymentConfirmation</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>PaymentConfirmation</servlet-name>
+		<url-pattern>/PaymentConfirmation</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>EditProfile</servlet-name>
+        <servlet-class>EditProfile</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>EditProfile</servlet-name>
+		<url-pattern>/EditProfile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>PayBill</servlet-name>
+        <servlet-class>PayBill</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>PayBill</servlet-name>
+		<url-pattern>/PayBill</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>ManageEvents</servlet-name>
+        <servlet-class>ManageEvents</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>ManageEvents</servlet-name>
+		<url-pattern>/ManageEvents</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>Tickets</servlet-name>
+        <servlet-class>ManageTickets</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>Tickets</servlet-name>
+		<url-pattern>/Tickets</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>ScheduleTicket</servlet-name>
+        <servlet-class>ScheduleTicket</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>ScheduleTicket</servlet-name>
+		<url-pattern>/ScheduleTicket</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>CancelEvent</servlet-name>
+        <servlet-class>CancelEvent</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>CancelEvent</servlet-name>
+		<url-pattern>/CancelEvent</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>CreateAccount</servlet-name>
+        <servlet-class>CreateAccount</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>CreateAccount</servlet-name>
+		<url-pattern>/CreateAccount</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>CreateTicket</servlet-name>
+        <servlet-class>CreateTicket</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>CreateTicket</servlet-name>
+		<url-pattern>/CreateTicket</url-pattern>
+	</servlet-mapping>
+	
+	<!--servlet>
+        <servlet-name>TVPlans</servlet-name>
+        <servlet-class>Products</servlet-class>
+		<init-param>
+      		<param-name>
+        		department
+     		 </param-name>
+      		<param-value>
+        		tv_plans
+      		</param-value>
+    	</init-param>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>TVPlans</servlet-name>
+		<url-pattern>/Products/TVPlans</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>InternetPlans</servlet-name>
+        <servlet-class>Products</servlet-class>
+		<init-param>
+      		<param-name>
+        		department
+     		 </param-name>
+      		<param-value>
+        		internet_plans
+      		</param-value>
+    	</init-param>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>InternetPlans</servlet-name>
+		<url-pattern>/Products/InternetPlans</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>Games</servlet-name>
+        <servlet-class>Products</servlet-class>
+		<init-param>
+      		<param-name>
+        		department
+     		 </param-name>
+      		<param-value>
+        		games
+      		</param-value>
+    	</init-param>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>Games</servlet-name>
+		<url-pattern>/Products/Games</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>PPVSports</servlet-name>
+        <servlet-class>Products</servlet-class>
+		<init-param>
+      		<param-name>
+        		department
+     		 </param-name>
+      		<param-value>
+        		sports_events
+      		</param-value>
+    	</init-param>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>PPVSports</servlet-name>
+		<url-pattern>/Products/PPVSports</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>PPVMovies</servlet-name>
+        <servlet-class>Products</servlet-class>
+		<init-param>
+      		<param-name>
+        		department
+     		 </param-name>
+      		<param-value>
+        		movies
+      		</param-value>
+    	</init-param>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>PPVMovies</servlet-name>
+		<url-pattern>/Products/PPVMovies</url-pattern>
+	</servlet-mapping-->
+	
+<!-- #################################################################################
+	 #################################################################################
+     ################################################################################# -->
+
+</web-app>

@@ -1,0 +1,22 @@
+#header {
+	background-color: lightgray;
+	padding: 1px;
+	padding-left: 1em;
+}
+
+#body {
+	padding: 1px;
+	padding-left: 1em;
+	background-color: whitesmoke;
+}
+
+#products {
+	overflow: scroll;
+	min-height: 10em;
+	max-height: 20em;
+	background-color: white;
+}
+
+td {
+	padding: 0.5em;
+}
